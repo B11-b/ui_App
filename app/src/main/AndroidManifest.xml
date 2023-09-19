@@ -13,15 +13,16 @@
         android:theme="@style/Theme.Project1K"
         tools:targetApi="33">
         <activity android:name="com.proj.project1k.MainActivity"
-            >
-        </activity>
-        <activity android:name="com.proj.project1k.MenuActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name="com.proj.project1k.MenuActivity"
+         >
+
         </activity>
         <activity android:name="com.proj.project1k.LoginActivity">
 

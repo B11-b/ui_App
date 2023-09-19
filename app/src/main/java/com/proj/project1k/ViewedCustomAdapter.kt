@@ -13,6 +13,7 @@ import com.proj.project1k.model.MostViewed
 
 class ViewedCustomAdapter(var viewedList:ArrayList<MostViewed>): RecyclerView.Adapter<ViewedCustomAdapter.MostViewedViewHolder>() {
   //  inner class ViewHolder(val binding: MostviewedItemBinding):RecyclerView.ViewHolder(binding.root)
+  // TODO: connect items to their layout references
    class MostViewedViewHolder (itemView: View):RecyclerView.ViewHolder(itemView){
        val image:ImageView
        val title:TextView
@@ -24,14 +25,14 @@ class ViewedCustomAdapter(var viewedList:ArrayList<MostViewed>): RecyclerView.Ad
        }
 
    }
-
+    // TODO [1]: create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MostViewedViewHolder {
       val view=LayoutInflater.from(parent.context)
         .inflate(R.layout.mostviewed_item,parent,false)
       return MostViewedViewHolder(view)
     }
 
-
+    // TODO: [2] connect item views to data source
     override fun onBindViewHolder(holder: MostViewedViewHolder, position: Int) {
         holder.image.setImageResource(viewedList[position].profile)
         holder.title.text=viewedList[position].title

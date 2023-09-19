@@ -20,6 +20,10 @@ class MenuActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= MenuActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val profileName = intent.getStringExtra("Username")
+        binding.text2.text=profileName
+        val loginName=intent.getStringExtra("login")
+        binding.text1.text=loginName
         // TODO: [1] getting recycler view by its ID
         val categoryRv=findViewById<RecyclerView>(R.id.category_rv)
         val mostViewedRv=findViewById<RecyclerView>(R.id.viewed_rv)
@@ -33,13 +37,17 @@ class MenuActivity: AppCompatActivity() {
         categoryitem.add(Category(R.drawable.cat_1,"Map"))
         categoryitem.add(Category(R.drawable.cat_2,"Cart"))
         categoryitem.add(Category(R.drawable.cat_3,"Music"))
-        categoryitem.add(Category(R.drawable.cat_4,"Email"))
+        categoryitem.add(Category(R.drawable.cat_4,"Inbox"))
+        categoryitem.add(Category(R.drawable.cat_1,"Map"))
+        categoryitem.add(Category(R.drawable.cat_2,"Cart"))
+        categoryitem.add(Category(R.drawable.cat_3,"Music"))
+        categoryitem.add(Category(R.drawable.cat_4,"Inbox"))
         Mviewed.add(MostViewed(R.drawable.pic_1,"Browsing Bruges in Belgium","Bruges is one of Europe's best preserved cities"))
-        Mviewed.add(MostViewed(R.drawable.pic_2,"Browsing Bruges in Belgium","Bruges is one of Europe's best preserved cities"))
+        Mviewed.add(MostViewed(R.drawable.pic_2,"Browsing Bruges in Belgium","jjjjjjjjjjjjjjjjjjjj"))
         Mviewed.add(MostViewed(R.drawable.pic_3,"Browsing Bruges in Belgium","Bruges is one of Europe's best preserved cities"))
-        Mviewed.add(MostViewed(R.drawable.pic_1,"Browsing Bruges in Belgium","Bruges is one of Europe's best preserved cities"))
+        Mviewed.add(MostViewed(R.drawable.pic_1,"Browsing Bruges in Belgium","llllllllllllllllllllllllllllllll"))
         Mviewed.add(MostViewed(R.drawable.pic_2,"Browsing Bruges in Belgium","Bruges is one of Europe's best preserved cities"))
-        Mviewed.add(MostViewed(R.drawable.pic_1,"Browsing Bruges in Belgium","Bruges is one of Europe's best preserved cities"))
+        Mviewed.add(MostViewed(R.drawable.pic_1,"Browsing Bruges in Belgium","jjjjjjjjjjjjjjjjjjjjjjjjjjjjjj "))
         // TODO: [5] create an adapter reference
         val categoryadapt= CategoryCustomAdapter(categoryitem)
         val viewedadapt= ViewedCustomAdapter(Mviewed)
@@ -53,9 +61,4 @@ class MenuActivity: AppCompatActivity() {
 
 
     }
-    /*binding.categoryRv.layoutManager = LinearLayoutManager(this)
-        binding.categoryRv.adapter=categoryCustomAdapter
-
-        binding.viewedRv.layoutManager = LinearLayoutManager(this)
-        binding.viewedRv.adapter=viewedCustomAdapter*/
 }
