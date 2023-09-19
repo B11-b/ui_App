@@ -19,7 +19,7 @@ class SignupActivity:AppCompatActivity() {
         val password = binding.passEd.text
         val repassword= binding.repasswordEd.text
         binding.loginButton.setOnClickListener {
-            if ((email.isNotEmpty() && password.isNotEmpty()&&password.isNotEmpty()&&repassword.isNotEmpty())){
+            if ((name.isNotEmpty()&&email.isNotEmpty() && password.isNotEmpty()&&password.isNotEmpty()&&repassword.isNotEmpty())){
                 val intent = Intent(this, MenuActivity::class.java)
                 intent.putExtra("Username", "Hi $name !")
                 startActivity(intent)
